@@ -35,7 +35,11 @@ Validate the HTML code.
 Publish the website in the given URL.
 
 ## PROGRAM :
+<<<<<<< HEAD
 ```html
+=======
+```HTML
+>>>>>>> 8ce54707e980ffdb5da5ec39126488e5c6bdfc82
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,7 +176,10 @@ h1{
               lval=parseFloat(lengthtext.value)
               hval=parseFloat(heighttext.value)
               wval=parseFloat(widthtext.value)
+<<<<<<< HEAD
               
+=======
+>>>>>>> 8ce54707e980ffdb5da5ec39126488e5c6bdfc82
               vval=lval*hval*wval
 
               volumetext.value=""+vval;
@@ -186,8 +193,13 @@ h1{
 </body>
 </html>
 ```
+<<<<<<< HEAD
 
 ## OUTPUT:
+=======
+## OUTPUT:
+
+>>>>>>> 8ce54707e980ffdb5da5ec39126488e5c6bdfc82
 ![output](./ss.JPG)
 
 ## Result:
