@@ -88,25 +88,25 @@ h1{
 <body>
     <div class="container">
         <div class="content">
-            <h1>VOLUME OF CYLINDER</h1>
+            <h1>AREA OF RECTANGLE</h1>
             <form>
                 <div class=formelement>
-                    <lable for="aedit">Height:</lable>
+                    <lable for="aedit">Length:</lable>
                     <input type="text" id="aedit" value="0"/>
                 </div><br>
                 <div class=formelement>
-                    <lable for="bedit">Radius:</lable>
+                    <lable for="bedit">Width:</lable>
                     <input type="text" id="bedit" value="0"/>
                 </div><br>
                 <div class=formelement>
-                    <input type="button" value="CALCULATE" id="calbutton"/>
+                    <input type="button" value="AREA" id="calbutton"/>
                 </div><br>
                 <div class=formelement>
-                    <lable for="cedit">Volume:</lable>
+                    <lable for="cedit">Area:</lable>
                     <input type="text" id="cedit" readonly="0"/>
                 </div><br>
                 <div class=formelement>
-                    Formula is = pi*Radius^2*Height
+                    Formula is LENGTH*WIDTH
                 </div>
             </form>
         </div>
@@ -122,30 +122,34 @@ h1{
 
                 aval=parseInt(atext.value);
                 bval=parseInt(btext.value);
-                cval=22/7*aval*2(bval);
+                cval=aval*bval
                 ctext.value=""+cval;
             });
         </script>
         <div class="content2">
-            <h1>VOLUME OF CONE</h1>
+            <h1>VOLUME OF RECTANGLE</h1>
             <form>
                 <div class="formelement">
-                  <lable for="radiusedit">RADIUS:</lable>
-                  <input type="text" id="radiusedit" value=" "/>
+                  <lable for="radiusedit">Length:</lable>
+                  <input type="text" id="lengthedit" value=" "/>
                 </div><br>
                 <div class="formelement">
-                  <lable for="heightedit">HEIGHT:</lable>
+                  <lable for="heightedit">Height:</lable>
                   <input type="text" id="heightedit" value=" "/>
                 </div><br>
                 <div class="formelement">
-                  <input type="button" value="CALCULATE" id="calbutton"/>
+                  <lable for="heightedit">Width:</lable>
+                  <input type="text" id="widthedit" value=" "/>
+                </div><br>
+                <div class="formelement">
+                  <input type="button" value="Volume" id="valbutton"/>
                 </div><br>
                 <div class="formelement">
                   <lable for="volumeedit">VOLUME:</lable>
                   <input type="text" id="volumeedit" readonly="0"/>
                 </div><br>
                 <div class="formelement">
-                Formula is:V=π*Radius^2*Height/3
+                Formula is:Length*Width*Height
                 </div><br>
                 
             </form>
@@ -154,20 +158,23 @@ h1{
         </div>
         <script type="text/javascript">
           var button;
-          button=document.querySelector("#calbutton");
+          button=document.querySelector("#valbutton");
           button.addEventListener("click",function(){
             
-              var radiustext,heighttext,volumetext;
-              var aval,bval,cval;
+              var lengthtext,heighttext,widthtext,volumetext;
+              var lval,hval,wval,vval;
     
-              radiustext=document.querySelector("#radiusedit");
+              lengthtext=document.querySelector("#lengthedit");
               heighttext=document.querySelector("#heightedit");
+              widthtext=document.querySelector("#widthedit");
               volumetext=document.querySelector("#volumeedit");
       
-              aval=parseInt(radiustext.value);
-              bval=parseInt(heighttext.value);
-              cval=(22/7)aval2(bval/3);
-              volumetext.value=""+cval;
+              lval=parseFloat(lengthtext.value)
+              hval=parseFloat(heighttext.value)
+              wval=parseFloat(widthtext.value)
+              vval=lval*hval*wval
+
+              volumetext.value=""+vval;
         
       
             });
@@ -180,7 +187,7 @@ h1{
 ```
 ## OUTPUT:
 
-![output](https://github.com/Shaik-sameer-AIML/mathwebsite/blob/main/math.JPG?raw=true)
+![output](./ss.JPG)
 
 ## Result:
 
